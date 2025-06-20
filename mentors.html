@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导师简介 - 湖南大学生物学院姚瑞枫教授课题组</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <img src="images/logo.png" alt="logo" class="logo-placeholder">
+            <h1>湖南大学生物学院姚瑞枫教授课题组</h1>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="mentors.html" class="active">导师简介</a></li>
+                <li><a href="fields.html">研究领域</a></li>
+                <li><a href="achievements.html">研究成果</a></li>
+                <li><a href="equipments.html">仪器设备</a></li>
+                <li><a href="news.html">资讯中心</a></li>
+                <li><a href="dynamics.html">组内动态</a></li>
+                <li><a href="recruit.html">招生招聘</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content-section">
+            <h2>导师简介</h2>
+            <div class="mentors-list">
+                <div class="mentor-card">
+                    <img src="images/mentor1.jpg" alt="导师1" class="mentor-avatar">
+                    <div class="mentor-info">
+                        <h3>姚瑞枫 教授</h3>
+                        <p>湖南大学生物学院教授，课题组负责人，主要研究方向为生物材料与分子工程。</p>
+                        <a href="mentor1.html" class="mentor-detail-link">查看详情</a>
+                    </div>
+                </div>
+                <div class="mentor-card">
+                    <img src="images/mentor2.jpg" alt="导师2" class="mentor-avatar">
+                    <div class="mentor-info">
+                        <h3>陈丽 副教授</h3>
+                        <p>植物-微生物相互作用、植物激素作用机理等。</p>
+                        <a href="mentor2.html" class="mentor-detail-link">查看详情</a>
+                    </div>
+                </div>
+                <div class="mentor-card">
+                    <img src="images/mentor3.jpg" alt="导师3" class="mentor-avatar">
+                    <div class="mentor-info">
+                        <h3>张蒙 副教授</h3>
+                        <p>研究方向植物分子生物学，聚焦于植物性状（株型、逆境胁迫响应、种子萌发、次生代谢等）的分子调控机制。</p>
+                        <a href="mentor3.html" class="mentor-detail-link">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="mentor-detail-modal" class="modal" style="display:none">
+        <div class="modal-content">
+            <span class="close" onclick="closeMentorDetail()">&times;</span>
+            <div id="mentor-detail-content">
+                <!-- 详细介绍内容由JS填充 -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-plant"></div>
+        <div class="footer-info">
+            <p>地址：湖南省长沙市岳麓区湖南大学生物学院</p>
+            <p>邮箱：yaoruifeng@hnu.edu.cn</p>
+            <p>© 2024 姚瑞枫课题组. 保留所有权利.</p>
+        </div>
+    </footer>
+    <script>
+    // 仅本页弹窗功能
+    const mentorDetails = [
+        {
+            name: '姚瑞枫 教授',
+            content: `<p><b>姚瑞枫</b>，湖南大学生物学院教授，课题组负责人。长期从事生物材料与分子工程领域研究，主持多项国家自然科学基金项目，发表高水平论文数十篇，获省部级奖励。研究方向包括高分子生物材料、智能分子设计等。</p>`
+        },
+        {
+            name: '李明 副教授',
+            content: `<p><b>李明</b>，副教授，专注于生物信息学与蛋白质工程。承担多项国家级课题，指导多名研究生，研究成果丰富，致力于蛋白质结构预测与功能分析。</p>`
+        },
+        {
+            name: '王芳 博士',
+            content: `<p><b>王芳</b>，博士，研究方向为细胞生物学与分子诊断。发表多篇高水平论文，参与多项科研项目，擅长细胞信号通路与分子检测技术。</p>`
+        }
+    ];
+    function showMentorDetail(idx) {
+        const modal = document.getElementById('mentor-detail-modal');
+        const content = document.getElementById('mentor-detail-content');
+        content.innerHTML = `<h2>${mentorDetails[idx].name}</h2>${mentorDetails[idx].content}`;
+        modal.style.display = 'flex';
+    }
+    function closeMentorDetail() {
+        document.getElementById('mentor-detail-modal').style.display = 'none';
+    }
+    </script>
+</body>
+</html> 

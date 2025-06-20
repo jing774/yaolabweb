@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湖南大学生物学院姚瑞枫教授课题组</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <img src="images/logo.png" alt="logo" class="logo-placeholder">
+            <h1>湖南大学生物学院姚瑞枫教授课题组</h1>
+        </div>
+        <nav class="navbar">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="mentors.html">导师简介</a></li>
+                <li><a href="fields.html">研究领域</a></li>
+                <li><a href="achievements.html">研究成果</a></li>
+                <li><a href="equipments.html">仪器设备</a></li>
+                <li><a href="news.html">资讯中心</a></li>
+                <li><a href="dynamics.html">组内动态</a></li>
+                <li><a href="recruit.html">招生招聘</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home-tab" class="tab-page">
+            <section class="carousel-section">
+                <div class="carousel">
+                    <div class="carousel-slide active">
+                        <img src="images/prp.png" alt="轮播图1" class="carousel-img">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/sls.png" alt="轮播图2" class="carousel-img">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/atd14.png" alt="轮播图3" class="carousel-img">
+                    </div>
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+            </section>
+            <section class="content-section">
+                <h2>欢迎来到姚瑞枫教授课题组</h2>
+                <p>这里是湖南大学生物学院姚瑞枫教授课题组网站。页面内容可根据实际需求进行修改和完善。</p>
+            </section>
+        </section>
+        <section id="mentors-tab" class="tab-page" style="display:none">
+            <div class="mentors-list">
+                <div class="mentor-card">
+                    <img src="images/mentor1.jpg" alt="导师1" class="mentor-avatar">
+                    <div class="mentor-info">
+                        <h3>姚瑞枫 教授</h3>
+                        <p>湖南大学生物学院教授，课题组负责人，主要研究方向为生物材料与分子工程。</p>
+                        <button onclick="showMentorDetail(0)">查看详情</button>
+                    </div>
+                </div>
+                <div class="mentor-card">
+                    <img src="images/mentor2.jpg" alt="导师2" class="mentor-avatar">
+                    <div class="mentor-info">
+                        <h3>李明 副教授</h3>
+                        <p>专注于生物信息学与蛋白质工程，承担多项国家级课题。</p>
+                        <button onclick="showMentorDetail(1)">查看详情</button>
+                    </div>
+                </div>
+                <div class="mentor-card">
+                    <img src="images/mentor3.jpg" alt="导师3" class="mentor-avatar">
+                    <div class="mentor-info">
+                        <h3>王芳 博士</h3>
+                        <p>研究方向为细胞生物学与分子诊断，发表多篇高水平论文。</p>
+                        <button onclick="showMentorDetail(2)">查看详情</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="mentor-detail-modal" class="modal" style="display:none">
+        <div class="modal-content">
+            <span class="close" onclick="closeMentorDetail()">&times;</span>
+            <div id="mentor-detail-content">
+                <!-- 详细介绍内容由JS填充 -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-plant"></div>
+        <div class="footer-info">
+            <p>地址：湖南省长沙市岳麓区湖南大学生物学院</p>
+            <p>邮箱：ryao@hnu.edu.cn</p>
+            <p>© 2024 姚瑞枫课题组. 保留所有权利.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
